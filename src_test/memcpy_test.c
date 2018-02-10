@@ -15,6 +15,23 @@ void	memcpy_test()
 	if (s2)
 		free(s2);
 	if (ret)
-		exit(FAIL);
-	exit(OK);
+		exit(EXIT_FAILURE);
+	exit(EXIT_SUCCESS);
+}
+
+void	memcpy_test_first_null()
+{
+	ft_memcpy(NULL, "[]", 2);
+	exit(EXIT_FAILURE);
+}
+
+void	memcpy_test_second_null()
+{
+	ft_memcpy(malloc(1), NULL, 2);
+	exit(EXIT_FAILURE);
+}
+void	memcpy_test_zero()
+{
+	ft_memcpy(NULL, NULL, 0);
+	exit(EXIT_SUCCESS);
 }

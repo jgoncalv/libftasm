@@ -12,8 +12,8 @@ _ft_cat:
 	mov rbp, rsp
 	sub rbp, BUF_SIZE			; on prepare le buffeur
 
-	cmp rdi, -1
-	je end
+	cmp di, -1
+	jle end
 
 	mov rbx, rdi				; stock rdi dans rbx
 	mov rsi, rbp				; rsi pointe sur le buf

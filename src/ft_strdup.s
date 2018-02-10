@@ -9,9 +9,6 @@ _ft_strdup:
 	push rbp
 	mov rbp, rsp
 
-	cmp rdi, 0
-	je exit
-
 	call _ft_strlen		; recupere la len de la string
 	push rdi
 
